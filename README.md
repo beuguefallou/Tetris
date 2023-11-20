@@ -1,16 +1,12 @@
 # Tetris
 A vanilla javascript game
 
-Watch my tutorial [here](https://www.youtube.com/watch?v=GWPGz9hrVMk)
 
-I have kept the styling at a bare miniumum for you to go wild and make it your own. Please tag me as I would LOVE to see your game!!!
+Dans ce cours, vous apprendrez comment mettre en place un projet à partir de zéro en utilisant l'éditeur de code Atom et votre outil d'invite de commande, ainsi que d'acquérir une compréhension fondamentale de JavaScript en construisant votre propre version de Tetris.
 
-Tetris is a tile-matching puzzle game from the 80’s. Try to get your personal high score by moving each of the 5 randomly selected Tetromino shapes sideways and/or rotating by quarter-turns, so that they form a solid horizontal line without gaps. When such a line is formed, it disappears and any blocks above it fall down to fill the space. For each line you will receive 10 points.
- 
-This was my first project from General Assembly's Software Engineering Immersive Course. It was also my first time building a project with JavaScript.
+C'est un excellent cours pour ceux d'entre vous qui n'ont jamais touché le code auparavant ou ceux d'entre vous avec une certaine compréhension de base de JavaScript, qui voudrait refaire en revue les fondamentaux.
 
-![Tetris](https://github.com/kubowania/Tetris/blob/master/images/Tetris%20Game.gif)
-
+Ce cours consiste en des vidéos explicatives qui vous parcourront des concepts tels que "Expliquer les variables", "Qu'est-ce qu'une fonction et comment nous l'utilisons", "Comprendre les réseaux", et bien d'autres. Ces vidéos explicatives sont en pointillés tout au long du projet Tetris et jouent lorsque nous commençons à découvrir chaque concept ou méthode javaScript. Ces vidéos explicatives consistent en des images et des diagrammes pour ceux d'entre vous qui sont des apprenants visuels. Il y a aussi des questions à choix multiples à la fin de certaines conférences.
 
 
 
@@ -25,7 +21,7 @@ This was my first project from General Assembly's Software Engineering Immersive
 * Deploy your game online, using Github Pages, where the rest of the world can access it
 * Use semantic markup for HTML and CSS (adhere to best practices)
 
-<h2>Technologies Used</h2>
+<h2>Dans ce jeu de Tetris, nous couvrirons les méthodes JavaScript ci-après:</h2>
 
 * HTML5
 * CSS3
@@ -34,28 +30,7 @@ This was my first project from General Assembly's Software Engineering Immersive
 * GitHub
 * Google Fonts
 
-<h2>Features piece of code no.1</h2>
 
-
-```
-//freeze the shape
-  function freeze() {
-    // if block has settled
-    if(current.some(index => squares[currentPosition + index + width].classList.contains('block3') || squares[currentPosition + index + width].classList.contains('block2'))) {
-      // make it block2
-      current.forEach(index => squares[index + currentPosition].classList.add('block2'))
-      // start a new tetromino falling
-      random = nextRandom
-      nextRandom = Math.floor(Math.random() * theTetrominoes.length)
-      current = theTetrominoes[random][currentRotation]
-      currentPosition = 4
-      draw()
-      displayShape()
-      addScore()
-      gameOver()
-    }
-  }
-  freeze()
 
 ```
 
@@ -80,14 +55,3 @@ This was my first project from General Assembly's Software Engineering Immersive
 
 ```
 
-### MIT Licence
-
-Copyright (c) 2020 Ania Kubow
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*Translation: Ofcourse you can use this for you project! Just make sure to say where you got this from :)
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
